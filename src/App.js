@@ -114,7 +114,9 @@ function Friend({ Freind, onSelection, selectedF }) {
 
       {Freind.balance === 0 && <p>you and {Freind.name} are even</p>}
 
-      <Button onClick={() => onSelection(Freind)}>Select</Button>
+      <Button onClick={() => onSelection(Freind)}>
+        {isSelected ? "Close" : "Select"}
+      </Button>
     </li>
   );
 }
